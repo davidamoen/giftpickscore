@@ -1,0 +1,13 @@
+/home/dave/Projects/giftpickscore/bin/Debug/netcoreapp3.1/giftpickscore
+/home/dave/Projects/giftpickscore/bin/Debug/netcoreapp3.1/giftpickscore.deps.json
+/home/dave/Projects/giftpickscore/bin/Debug/netcoreapp3.1/giftpickscore.runtimeconfig.json
+/home/dave/Projects/giftpickscore/bin/Debug/netcoreapp3.1/giftpickscore.runtimeconfig.dev.json
+/home/dave/Projects/giftpickscore/bin/Debug/netcoreapp3.1/giftpickscore.dll
+/home/dave/Projects/giftpickscore/bin/Debug/netcoreapp3.1/giftpickscore.pdb
+/home/dave/Projects/giftpickscore/obj/Debug/netcoreapp3.1/giftpickscore.csprojAssemblyReference.cache
+/home/dave/Projects/giftpickscore/obj/Debug/netcoreapp3.1/giftpickscore.AssemblyInfoInputs.cache
+/home/dave/Projects/giftpickscore/obj/Debug/netcoreapp3.1/giftpickscore.AssemblyInfo.cs
+/home/dave/Projects/giftpickscore/obj/Debug/netcoreapp3.1/giftpickscore.csproj.CoreCompileInputs.cache
+/home/dave/Projects/giftpickscore/obj/Debug/netcoreapp3.1/giftpickscore.dll
+/home/dave/Projects/giftpickscore/obj/Debug/netcoreapp3.1/giftpickscore.pdb
+/home/dave/Projects/giftpickscore/obj/Debug/netcoreapp3.1/giftpickscore.genruntimeconfig.cache
