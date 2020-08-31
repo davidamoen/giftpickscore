@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "loG4cHCARwDexKqj8zaYZ6HbOPdIXPd2mb/ki9+0bu3HN8lglzsCtLJxWuvWS3gbe9OOaW0X81bDXTBTiF6AoQ==",
+  "dgSpecHash": "1pQi0u3RNx3ffn8t2aciNIZsZ49P9l/+5WurYa13op25w9fH2b/5oBF22DuITgRXMGDN0oD8Elqg01Xpxix2Tw==",
   "success": true,
-  "projectFilePath": "/home/dave/Projects/giftpickscore/giftpickscore.csproj",
+  "projectFilePath": "C:\\Users\\david\\source\\repos\\giftpickscore\\giftpickscore.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
