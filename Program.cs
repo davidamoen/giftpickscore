@@ -14,7 +14,16 @@ namespace giftpickscore
 
         public static void Run()
         {
-            var people = GetPeople();
+            var family = "m";
+
+            while(family.ToLower() != "m" && family.ToLower() != "k") 
+            {
+                Console.WriteLine("Which family are you creating a list for?");
+                Console.Write("Type \"m\" for Moen or \"k\" for Kremer: ");
+                family = Console.ReadLine(); 
+            }
+
+            var people = family.ToLower() == "k" ? GetFamily(Families.Kremers) : GetFamily(Families.Moens);
 
             var results = new Dictionary<string, string>();
 
@@ -29,6 +38,7 @@ namespace giftpickscore
             {
                 var doneDrawing = false;
                 var drawCount = 0;
+                Console.WriteLine($"Drawing for {drawer.Name.ToString()}");
                 while (!doneDrawing)
                 {
                     var idx = r.Next(0, hat.Count);
@@ -43,8 +53,12 @@ namespace giftpickscore
                         drawCount++;
                         if (drawCount > 10)
                         {
-                            Console.WriteLine("Sorry, this list isn't working.  Please try again. ");
-                            return;
+                            Console.WriteLine();
+                            Console.WriteLine();                            
+                            Console.WriteLine("That drawing failed!!! Trying again...");
+                            Console.WriteLine();
+                            Console.WriteLine();                            
+                            Run();
                         }
                     }
                 }
@@ -143,7 +157,63 @@ namespace giftpickscore
             return newList;
         }
 
-        private static List<Person> GetPeople()
+        private static List<Person> GetFamily(Families family)
+        {
+            switch(family) 
+            {
+                case Families.Kremers:
+                    return GetKremerFamily();
+                case Families.Moens:
+                    return GetMoenFamily();
+                default:
+                    return new List<Person>();
+            }
+        }
+
+        private static List<Person> GetMoenFamily()
+        {
+            return new List<Person>()
+            {
+                new Person(Members.Julie)
+                {
+                    Spouse = Members.Mark
+                },
+                new Person(Members.Mark)
+                {
+                    Spouse = Members.Julie
+                },
+                new Person(Members.Cindy)
+                {
+                    Spouse = Members.David,
+                    Children = { Members.Garrett, Members.Nicholas }
+                },
+                new Person(Members.David)
+                {
+                    Spouse = Members.Cindy,
+                    Children = { Members.Garrett, Members.Nicholas }
+                },
+                new Person(Members.Garrett)
+                {
+                    Spouse = Members.None,
+                    Siblings = { Members.Nicholas }
+                },
+                new Person(Members.Nicholas)
+                {
+                    Spouse = Members.None,
+                    Siblings = { Members.Garrett }
+                },
+                new Person(Members.Sally) 
+                {
+                    Spouse = Members.None
+                },
+                new Person(Members.Jacque)
+                {
+                    Spouse = Members.None
+                }
+            };
+        }
+
+        private static List<Person> GetKremerFamily()
         {
             return new List<Person>()
             {
@@ -174,10 +244,10 @@ namespace giftpickscore
                 },
                 new Person(Members.Cindy)
                 {
-                    Spouse = Members.Dave,
+                    Spouse = Members.David,
                     Children = { Members.Garrett, Members.Nicholas }
                 },
-                new Person(Members.Dave)
+                new Person(Members.David)
                 {
                     Spouse = Members.Cindy,
                     Children = { Members.Garrett, Members.Nicholas }
@@ -205,6 +275,12 @@ namespace giftpickscore
         }
 
     }
+
+    public enum Families
+    {
+        Kremers,
+        Moens
+    }
     public enum Members
         {
             Cari,
@@ -213,11 +289,15 @@ namespace giftpickscore
             Thomas,
             Cecelia,
             Cindy,
-            Dave,
+            David,
             Garrett,
             Nicholas,
             Lorna,
             Jack,
+            Julie,
+            Mark,
+            Sally,
+            Jacque,
             None
         }
 
