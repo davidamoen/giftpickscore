@@ -38,7 +38,7 @@ namespace giftpickscore
             {
                 var doneDrawing = false;
                 var drawCount = 0;
-                Console.WriteLine($"Drawing for {drawer.Name.ToString()}");
+                Console.WriteLine($"{drawer.Name.ToString()} is drawing.");
                 while (!doneDrawing)
                 {
                     var idx = r.Next(0, hat.Count);
@@ -118,7 +118,7 @@ namespace giftpickscore
                 return false;
             }
 
-            Console.WriteLine($"{drawer.Name} can give to {giftee.Name}! Hooray!");
+            Console.WriteLine($"{drawer.Name} can give to {giftee.Name}! That works!");
             Console.WriteLine(divider);
             return true;
         }      
@@ -176,11 +176,17 @@ namespace giftpickscore
             {
                 new Person(Members.Julie)
                 {
-                    Spouse = Members.Mark
+                    Spouse = Members.Mark,
+                    Children = { Members.Quinn }
                 },
                 new Person(Members.Mark)
                 {
-                    Spouse = Members.Julie
+                    Spouse = Members.Julie,
+                    Children = { Members.Quinn }
+                },
+                new Person(Members.Quinn) 
+                {
+                    Spouse = Members.None
                 },
                 new Person(Members.Cindy)
                 {
@@ -231,11 +237,6 @@ namespace giftpickscore
                 {
                     Spouse = Members.None,
                     Siblings = { Members.Thomas, Members.Cecelia }
-                },
-                new Person(Members.Thomas)
-                {
-                    Spouse = Members.None,
-                    Siblings = { Members.Aidan, Members.Cecelia}
                 },
                 new Person(Members.Cecelia)
                 {
@@ -298,6 +299,7 @@ namespace giftpickscore
             Mark,
             Sally,
             Jacque,
+            Quinn,
             None
         }
 
