@@ -42,6 +42,7 @@ namespace giftpickscore
                 while (!doneDrawing)
                 {
                     var idx = r.Next(0, hat.Count);
+                    Console.WriteLine($"{drawer.Name.ToString()} drew {hat[idx].Name}'s name from the hat.  ");
                     if (OKPick(drawer,hat[idx])) 
                     {
                         results.Add(drawer.Name.ToString(), hat[idx].Name.ToString());
@@ -77,7 +78,6 @@ namespace giftpickscore
         public static bool OKPick(Person drawer, Person giftee)
         {
             Console.WriteLine(divider);
-            Console.WriteLine($"Trying {drawer.Name} and {giftee.Name}");
 
             if (drawer.Name == giftee.Name)
             {
