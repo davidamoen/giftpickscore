@@ -212,7 +212,7 @@ namespace giftpickscore
                 {
                     Spouse = Members.None
                 },
-                new Person(Members.Jacque)
+                new Person(Members.Liv)
                 {
                     Spouse = Members.None
                 }
@@ -270,7 +270,7 @@ namespace giftpickscore
                 new Person(Members.Jack)
                 {
                     Spouse = Members.Lorna,
-                },
+                }
             };
 
         }
@@ -300,6 +300,7 @@ namespace giftpickscore
             Sally,
             Jacque,
             Quinn,
+            Liv,
             None
         }
 
