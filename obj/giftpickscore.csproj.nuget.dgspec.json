@@ -1,33 +1,30 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\david.moen\\Projects\\giftpickscore\\giftpickscore.csproj": {}
+    "/home/david/source/giftpickscore/giftpickscore.csproj": {}
   },
   "projects": {
-    "C:\\Users\\david.moen\\Projects\\giftpickscore\\giftpickscore.csproj": {
+    "/home/david/source/giftpickscore/giftpickscore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\david.moen\\Projects\\giftpickscore\\giftpickscore.csproj",
+        "projectUniqueName": "/home/david/source/giftpickscore/giftpickscore.csproj",
         "projectName": "giftpickscore",
-        "projectPath": "C:\\Users\\david.moen\\Projects\\giftpickscore\\giftpickscore.csproj",
-        "packagesPath": "C:\\Users\\david.moen\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\david.moen\\Projects\\giftpickscore\\obj\\",
+        "projectPath": "/home/david/source/giftpickscore/giftpickscore.csproj",
+        "packagesPath": "/home/david/.nuget/packages/",
+        "outputPath": "/home/david/source/giftpickscore/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\david.moen\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/home/david/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp3.1"
+          "net7.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://nuget.org": {},
-          "https://pkgs.dev.azure.com/gmfinancial-digital/_packaging/digital-shared-framework/nuget/v3/index.json%22": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
+          "net7.0": {
+            "targetAlias": "net7.0",
             "projectReferences": {}
           }
         },
@@ -38,15 +35,16 @@
         }
       },
       "frameworks": {
-        "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
+        "net7.0": {
+          "targetAlias": "net7.0",
           "imports": [
             "net461",
             "net462",
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -55,7 +53,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.111\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.110/RuntimeIdentifierGraph.json"
         }
       }
     }

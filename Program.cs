@@ -14,7 +14,7 @@ namespace giftpickscore
 
         public static void Run()
         {
-            var family = "m";
+            var family = "k";
 
             while(family.ToLower() != "m" && family.ToLower() != "k") 
             {
@@ -43,7 +43,7 @@ namespace giftpickscore
                 {
                     var idx = r.Next(0, hat.Count);
                     Console.WriteLine($"{drawer.Name.ToString()} drew {hat[idx].Name}'s name from the hat.  ");
-                    if (OKPick(drawer,hat[idx])) 
+                    if (IsOkPick(drawer,hat[idx])) 
                     {
                         results.Add(drawer.Name.ToString(), hat[idx].Name.ToString());
                         hat.RemoveAt(idx);
@@ -75,7 +75,7 @@ namespace giftpickscore
 
         }
 
-        public static bool OKPick(Person drawer, Person giftee)
+        public static bool IsOkPick(Person drawer, Person giftee)
         {
             Console.WriteLine(divider);
 
@@ -88,7 +88,7 @@ namespace giftpickscore
 
             if (AreMarried(drawer, giftee))
             {
-                Console.WriteLine($"{drawer.Name} and {giftee.Name} are married!! Duh.");
+                Console.WriteLine($"{drawer.Name} and {giftee.Name} are married!!");
                 Console.WriteLine(divider);
 
                 return false;
@@ -190,10 +190,10 @@ namespace giftpickscore
                 },
                 new Person(Members.Cindy)
                 {
-                    Spouse = Members.David,
+                    Spouse = Members.Dave,
                     Children = { Members.Garrett, Members.Nicholas }
                 },
-                new Person(Members.David)
+                new Person(Members.Dave)
                 {
                     Spouse = Members.Cindy,
                     Children = { Members.Garrett, Members.Nicholas }
@@ -245,10 +245,10 @@ namespace giftpickscore
                 },
                 new Person(Members.Cindy)
                 {
-                    Spouse = Members.David,
+                    Spouse = Members.Dave,
                     Children = { Members.Garrett, Members.Nicholas }
                 },
-                new Person(Members.David)
+                new Person(Members.Dave)
                 {
                     Spouse = Members.Cindy,
                     Children = { Members.Garrett, Members.Nicholas }
@@ -290,7 +290,7 @@ namespace giftpickscore
             Thomas,
             Cecelia,
             Cindy,
-            David,
+            Dave,
             Garrett,
             Nicholas,
             Lorna,
